@@ -30,7 +30,7 @@ func (api *API) ConfigureRoutes() {
 	api.Echo.GET("/students", api.getStudents)
 	api.Echo.POST("/students", api.createStudent)
 	api.Echo.GET("/students/:id", api.getStudent)
-	api.Echo.PUT("/students/:id", api.updateStudent)
+	//	api.Echo.PUT("/students/:id", api.updateStudent)
 	api.Echo.DELETE("/students/:id", api.deleteStudent)
 }
 
