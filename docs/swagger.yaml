@@ -1,4 +1,43 @@
+definitions:
+  schemas.StudentResponse:
+    properties:
+      active:
+        type: boolean
+      age:
+        type: integer
+      cpf:
+        type: integer
+      createdAt:
+        type: string
+      deletedAt:
+        type: string
+      email:
+        type: string
+      id:
+        type: integer
+      name:
+        type: string
+      updatedAt:
+        type: string
+    type: object
 info:
   contact: {}
-paths: {}
+paths:
+  /students:
+    post:
+      consumes:
+      - application/json
+      description: Create student
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            $ref: '#/definitions/schemas.StudentResponse'
+        "400":
+          description: Bad Request
+      summary: Create student
+      tags:
+      - students
 swagger: "2.0"
